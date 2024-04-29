@@ -18,7 +18,6 @@ export default function Mensajecarrusel({ texto, imagenes, seleccionada, onMensa
             let cambio = false;
             for(let i=0;i<items.length && !cambio;i++){
                 if(items[i].classList.contains("selec") && i>0){
-                    console.log(i);
                     items[i].classList.remove("selec");
                     items[i-1].classList.add("selec");
                     items[i-1].classList.remove("prev");
@@ -36,7 +35,6 @@ export default function Mensajecarrusel({ texto, imagenes, seleccionada, onMensa
             let cambio = false;
             for(let i=0;i<items.length && !cambio;i++){
                 if(items[i].classList.contains("selec") && i+1<items.length){
-                    console.log(i);
                     items[i].classList.remove("selec");
                     items[i].classList.add("prev");
                     items[i+1].classList.add("selec");

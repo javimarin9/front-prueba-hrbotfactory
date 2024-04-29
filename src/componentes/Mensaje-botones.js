@@ -9,7 +9,6 @@ export default function Mensajebotones({ texto, botones, onMensajeClick }) {
             const botonSeleccionado = document.querySelector('.botones .botonSelec');
     
             if (!botonSeleccionado) {
-                console.log(boton.textContent);
                 const mensaje = boton.textContent;
                 boton.classList.add('botonSelec');
                 onMensajeClick(mensaje);

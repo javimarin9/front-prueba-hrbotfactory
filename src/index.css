@@ -50,6 +50,7 @@ img:not(.mensajeImg):not(.enviarImg):not(.item img){
   width: 100px;
   height: 100px;
   border-radius: 5px;
+  margin: auto auto 10px auto;
 }
 
 .chat{
@@ -95,6 +96,7 @@ img:not(.mensajeImg):not(.enviarImg):not(.item img){
   border-radius: 15px;
   border-bottom-left-radius: 0;
   padding: .5em;
+  margin-right: 2em;
 }
 
 .mensajeDer{
@@ -103,6 +105,7 @@ img:not(.mensajeImg):not(.enviarImg):not(.item img){
   border-bottom-right-radius: 0;
   padding: .5em;
   align-items: flex-end;
+  margin-left: 2em;
 }
 
 /*BOTONES DE LA APP*/
@@ -139,6 +142,8 @@ button[type="submit"]:not(#botonIzq):not(#botonDer){
 .botones{
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-right: 2em;
 }
 
 .botonEnviar{
@@ -226,4 +231,32 @@ form input{
   filter: brightness(0) invert(1);
   width: 20px;
   height: 20px;
+}
+
+/*MEDIA QUERY PARA HACER RESPONSIVE EL CARRUSEL*/
+@media all and (max-width: 600px){
+  #botonIzq img, #botonDer img, #botonIzq, #botonDer{
+    width: 20px;
+    height: 20px;
+  }
+
+  .item{
+    max-width: 15vw;
+  }
+
+  .item p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media all and (min-width: 601px){
+  .item img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .selec img {
+    transform: scale(1.4);
+  }
 }
